@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 0;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 32px 0 24px 0;
+            color: #000;
+        }
+
+        /* Theme Options */
+        .theme-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        .theme-option span {
+            font-size: 18px;
+            color: #000;
+        }
+
+        /* Accent Colors */
+        .accent-colors {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .color-option {
+            background: #f5f5f5;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .color-option:hover {
+            background: #e0e0e0;
+        }
+
+        /* Save Button */
+        .save-button {
+            background: #f5f5f5;
+            color: #000;
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 32px;
+            transition: background-color 0.3s;
+        }
+
+        .save-button:hover {
+            background: #e0e0e0;
+        }
+
+        /* Custom Checkbox */
+        .custom-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .custom-checkbox.checked {
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <i class="material-icons back-button">arrow_back</i>
+        <h1 class="title">Settings</h1>
+    </div>
+
+    <!-- Theme Section -->
+    <h2 class="section-title">Theme</h2>
+
+    <div class="theme-option">
+        <span>Light</span>
+        <div class="custom-checkbox checked"></div>
+    </div>
+
+    <div class="theme-option">
+        <span>Dark</span>
+        <div class="custom-checkbox"></div>
+    </div>
+
+    <!-- Accent Color Section -->
+    <h2 class="section-title">Accent Color</h2>
+
+    <div class="accent-colors">
+        <div class="color-option">Green</div>
+        <div class="color-option">Blue</div>
+        <div class="color-option">Yellow</div>
+        <div class="color-option">Purple</div>
+        <div class="color-option">Red</div>
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-button waves-effect">Save Changes</button>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+        // Theme selection
+        document.querySelectorAll('.custom-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', function() {
+                // Uncheck all checkboxes
+                document.querySelectorAll('.custom-checkbox').forEach(cb => {
+                    cb.classList.remove('checked');
+                });
+                // Check the clicked checkbox
+                this.classList.add('checked');
+            });
+        });
+
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(color => {
+            color.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(c => {
+                    c.style.backgroundColor = '#f5f5f5';
+                    c.style.color = '#000';
+                });
+                this.style.backgroundColor = '#2196f3';
+                this.style.color = '#fff';
+            });
+        });
+    </script>
+</body>
+</html>

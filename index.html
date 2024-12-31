@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #fafafa;
+        }
+        
+        .header {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            box-shadow: none;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: white;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        
+        .text-content {
+            flex: 1;
+        }
+        
+        .title {
+            font-size: 1rem;
+            margin: 0;
+            color: #212121;
+        }
+        
+        .subtitle {
+            font-size: 0.875rem;
+            color: #757575;
+            margin: 0;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9e9e9e;
+            text-decoration: none;
+        }
+        
+        .nav-item.active {
+            color: #2196f3;
+        }
+        
+        .nav-item i {
+            font-size: 24px;
+        }
+        
+        .nav-item span {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+        
+        .main-content {
+            padding: 16px;
+            margin-bottom: 64px;
+        }
+        
+        .search-icon {
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="header white">
+        <h1 class="title">Files</h1>
+        <i class="material-icons search-icon">search</i>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">add</i>
+            </div>
+            <div class="text-content">
+                <p class="title">New</p>
+                <p class="subtitle">Create a new folder or file</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">file_upload</i>
+                <a href="cloud.html" class="nav-item">
+            </div>
+            <div class="text-content">
+                <p class="title">Upload</p>
+                <p class="subtitle">Upload files to your Drive</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">arrow_forward</i>
+            </div>
+            <div class="text-content">
+                <p class="title">Move</p>
+                <p class="subtitle">Move selected items</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">content_copy</i>
+            </div>
+            <div class="text-content">
+                <p class="title">Copy</p>
+                <p class="subtitle">Copy selected items</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">delete</i>
+            </div>
+            <div class="text-content">
+                <p class="title">Delete</p>
+                <p class="subtitle">Delete selected items</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">edit</i>
+            </div>
+            <div class="text-content">
+                <p class="title">Rename</p>
+                <p class="subtitle">Rename the selected item</p>
+            </div>
+        </div>
+
+        <div class="menu-item waves-effect">
+            <div class="icon-wrapper">
+                <i class="material-icons">people</i>
+            </div>
+            <div class="text-content">
+                <p class="title">Compress</p>
+                <p class="subtitle">Compress the selected items</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="about.html" class="nav-item">
+            <i class="material-icons">people</i>
+            <span>About</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="material-icons">folder</i>
+            <span>Files</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="material-icons">help</i>
+            <span>help</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+            <i class="material-icons">settings</i>
+            <span>Settings</span>
+        </a>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

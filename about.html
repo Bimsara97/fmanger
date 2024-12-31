@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 24px 0 32px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 32px 0 24px 0;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .team-member img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-right: 16px;
+            object-fit: cover;
+        }
+
+        .member-info h3 {
+            font-size: 18px;
+            margin: 0 0 4px 0;
+            color: #000;
+        }
+
+        .member-info p {
+            font-size: 16px;
+            margin: 0;
+            color: #617387;
+        }
+
+        .company-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-card span {
+            font-size: 18px;
+            margin-left: 12px;
+        }
+
+        .company-logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        .company-info {
+            display: flex;
+            align-items: flex-start;
+            margin: 24px 0;
+        }
+
+        .company-info img {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            margin-right: 16px;
+        }
+
+        .company-details h3 {
+            font-size: 18px;
+            margin: 0 0 4px 0;
+        }
+
+        .company-details p {
+            font-size: 16px;
+            color: #617387;
+            margin: 4px 0;
+            line-height: 1.4;
+        }
+
+        .version-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .version-info span {
+            font-size: 16px;
+        }
+
+        .version-info .date {
+            color: #617387;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Title -->
+    <h1 class="page-title">About</h1>
+
+    <!-- Team Section -->
+    <h2 class="section-title">Developer</h2>
+    <div class="team-member">
+        <img src="profile.png" alt="Developer">
+        <div class="member-info">
+            <h3>R.M. Wasantha Lenora</h3>
+            <p>Student ID: 802782721</p>
+        </div>
+    </div>
+
+    <!-- Company Section -->
+    <h2 class="section-title">Company</h2>
+    
+    <div class="company-card">
+        <span class="material-icons">public</span>
+        <span>Materializecss</span>
+    </div>
+
+    <div class="company-info">
+        <img src="images.jpeg" alt="Company Logo">
+        <div class="company-details">
+            <h3>Materializecss</h3>
+            <p>Founded in 2020 by Nathan Gath</p>
+            <p>We build tools for developers to create better websites and apps</p>
+        </div>
+    </div>
+
+    <!-- Version Section -->
+    <h2 class="section-title">Version</h2>
+    <div class="version-info">
+        <span>1.0.0</span>
+        <span class="date">Dec 28, 2022</span>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
